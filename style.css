@@ -626,3 +626,38 @@ section{
     color: var(--black);
     text-decoration: underline;
 }
+#menu-btn{
+    font-size: 2.7rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--while);
+        border-top: var(--border);
+        padding: 1rem 0.5rem;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        transition: all ease-in .2s;
+    }
+    .header .flex .navbar .active{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
+    .header .flex .navbar a{
+        display: block;
+        padding: 1rem 2rem;
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+}
